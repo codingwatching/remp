@@ -11,7 +11,7 @@ function connect(ip, port)
     if not document.username.valid then
         return
     end
-    local client = session.get_entry('remp:client')
+    local client = session.get('remp:client')
     local username = document.username.text
     if username ~= profile:get_username() then
         profile:set_username(username)
